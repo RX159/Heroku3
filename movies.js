@@ -14,7 +14,7 @@ else
 
 const omdbMovie = function(title, callback)
 {
-	const url = 'http://www.omdbapi.com/?apikey=' + credentials.apiKey + 
+	const url = 'http://www.omdbapi.com/?apikey=' + Key + 
 	'&t=' + title
 
 	request({url, json: true}, function(error, response) 
@@ -48,7 +48,7 @@ const omdbMovie = function(title, callback)
 
 const omdbSeason = function(title, season, callback)
 {
-	const url = 'http://www.omdbapi.com/?apikey=' + credentials.apiKey + 
+	const url = 'http://www.omdbapi.com/?apikey=' + Key + 
 	'&t=' + title + '&Season=' + season
 
 	request({url, json: true}, function(error, response) 
