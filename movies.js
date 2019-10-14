@@ -4,12 +4,12 @@ const request = require('request')
 
 if(process.env.NODE_ENV === 'production')
 {
-	const  Key = process.env.API_KEY
+	var Key = process.env.API_KEY
 }
 else
 {
 	const credentials = require('./credentials.js')
-	const  Key = credentials.apiKey
+	var Key = credentials.apiKey
 }
 
 const omdbMovie = function(title, callback)
